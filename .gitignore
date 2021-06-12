@@ -2,4 +2,5 @@ venv
 .idea
 manage.py
 main.py
-bdsqlite
+*.sqlite3
+*pyc
