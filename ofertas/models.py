@@ -45,8 +45,8 @@ class Svas(models.Model):
 
 class Ofertas(models.Model):
     promocao = models.CharField(max_length=200, unique=True)
-    state = models.ManyToManyField(States, blank=True, null=True)
-    cities = models.ManyToManyField(Cities, blank=True, null=True)
+    state = models.ManyToManyField(States, blank=True)
+    cities = models.ManyToManyField(Cities, blank=True)
     is_special = models.BooleanField(default=False)
     special_text = models.CharField(max_length=200, default=None, blank=True, null=True)
     speed = models.PositiveIntegerField(default=0)
