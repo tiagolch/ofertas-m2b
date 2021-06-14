@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-^j@bgv+vx4i%s1qujndd@@j#0tqmoo)00t*%*p-ud+i9x+7c9@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ofertas-m2b.herokuapp.com','127.0.0.1','localhost']
+ALLOWED_HOSTS = ['ofertas-m2b.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
 DATABASES = {
-    'default': config('DATABASE_URL', default=default_dburl),
+    'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
 }
 
 
